@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modelvigil"
+version = "0.1.0"
+description = "Agentic post-market surveillance for clinical prediction models: label-free drift detection, root-cause diagnosis, PCCP-governed remediation and EU AI Act Art. 72 reporting."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Sanaz Jamalzadeh" }]
+dependencies = ["numpy>=1.26", "pandas>=2.1", "scipy>=1.11", "scikit-learn>=1.4", "matplotlib>=3.8", "threadpoolctl>=3.2"]
+
+[project.optional-dependencies]
+llm = ["anthropic>=0.40"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+modelvigil = "modelvigil.__main__:main"
+
+[tool.setuptools]
+packages = ["modelvigil"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

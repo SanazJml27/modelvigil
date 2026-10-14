@@ -1,0 +1,2134 @@
+{
+  "config": {
+    "scenario": "subgroup_site",
+    "seed": 7,
+    "llm": "mock",
+    "approval": "policy",
+    "shift_week": 5,
+    "n_weeks": 16,
+    "n_per_week": 600
+  },
+  "scenario": {
+    "description": "A renal/transplant unit (site D) joins the network. Creatinine carries far more risk there; overall metrics barely move while site D is systematically under-triaged.",
+    "root_cause": "subgroup_degradation",
+    "correct_action": "subgroup_restriction",
+    "harmful": true
+  },
+  "baseline": {
+    "auroc": 0.8762,
+    "oe": 0.9229,
+    "cbpe_auroc": 0.8799,
+    "n": 3000,
+    "mean_risk": 0.1311,
+    "alert_rate": 0.2117
+  },
+  "calibration_check": {
+    "calibration_auroc": 0.8825779746885074,
+    "calibration_oe": 0.9999252367352687
+  },
+  "weekly": [
+    {
+      "week": 1,
+      "signals": {},
+      "score": {
+        "n": 600,
+        "mean_risk": 0.132,
+        "alert_rate": 0.2
+      },
+      "cbpe_auroc": 0.8806,
+      "domain_auc": 0.4814,
+      "labelled": null,
+      "raw_signals": [],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 77,
+          "auroc": 0.9127,
+          "auroc_se": 0.0225,
+          "brier": 0.0664,
+          "oe": 0.9722,
+          "oe_ci": [
+            0.7673,
+            1.2151
+          ],
+          "sensitivity": 0.7792,
+          "ppv": 0.5,
+          "missed_events": 17,
+          "citl_intercept": -0.0477,
+          "logistic_a": 0.21,
+          "slope": 1.223,
+          "alerts": 120,
+          "false_alerts": 60
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 77,
+          "auroc": 0.9127,
+          "auroc_se": 0.0225,
+          "brier": 0.0664,
+          "oe": 0.9722,
+          "oe_ci": [
+            0.7673,
+            1.2151
+          ],
+          "sensitivity": 0.7792,
+          "ppv": 0.5,
+          "missed_events": 17,
+          "citl_intercept": -0.0477,
+          "logistic_a": 0.21,
+          "slope": 1.223,
+          "alerts": 120,
+          "false_alerts": 60
+        }
+      },
+      "model_version": "1.0.0"
+    },
+    {
+      "week": 2,
+      "signals": {},
+      "score": {
+        "n": 600,
+        "mean_risk": 0.1248,
+        "alert_rate": 0.18
+      },
+      "cbpe_auroc": 0.8811,
+      "domain_auc": 0.4799,
+      "labelled": null,
+      "raw_signals": [],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 77,
+          "auroc": 0.908,
+          "auroc_se": 0.023,
+          "brier": 0.0692,
+          "oe": 1.0281,
+          "oe_ci": [
+            0.8113,
+            1.2849
+          ],
+          "sensitivity": 0.6753,
+          "ppv": 0.4815,
+          "missed_events": 25,
+          "citl_intercept": 0.047,
+          "logistic_a": 0.2798,
+          "slope": 1.1796,
+          "alerts": 108,
+          "false_alerts": 56
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 77,
+          "auroc": 0.908,
+          "auroc_se": 0.023,
+          "brier": 0.0692,
+          "oe": 1.0281,
+          "oe_ci": [
+            0.8113,
+            1.2849
+          ],
+          "sensitivity": 0.6753,
+          "ppv": 0.4815,
+          "missed_events": 25,
+          "citl_intercept": 0.047,
+          "logistic_a": 0.2798,
+          "slope": 1.1796,
+          "alerts": 108,
+          "false_alerts": 56
+        }
+      },
+      "model_version": "1.0.0"
+    },
+    {
+      "week": 3,
+      "signals": {},
+      "score": {
+        "n": 600,
+        "mean_risk": 0.1438,
+        "alert_rate": 0.2333
+      },
+      "cbpe_auroc": 0.8802,
+      "domain_auc": 0.4879,
+      "labelled": {
+        "n": 600,
+        "events": 77,
+        "auroc": 0.9127,
+        "auroc_se": 0.0225,
+        "brier": 0.0664,
+        "oe": 0.9722,
+        "oe_ci": [
+          0.7673,
+          1.2151
+        ],
+        "sensitivity": 0.7792,
+        "ppv": 0.5,
+        "missed_events": 17,
+        "citl_intercept": -0.0477,
+        "logistic_a": 0.21,
+        "slope": 1.223,
+        "weeks": [
+          1
+        ]
+      },
+      "raw_signals": [],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 82,
+          "auroc": 0.8745,
+          "auroc_se": 0.0255,
+          "brier": 0.0802,
+          "oe": 0.9501,
+          "oe_ci": [
+            0.7557,
+            1.1794
+          ],
+          "sensitivity": 0.7439,
+          "ppv": 0.4357,
+          "missed_events": 21,
+          "citl_intercept": -0.088,
+          "logistic_a": -0.0903,
+          "slope": 0.9977,
+          "alerts": 140,
+          "false_alerts": 79
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 82,
+          "auroc": 0.8745,
+          "auroc_se": 0.0255,
+          "brier": 0.0802,
+          "oe": 0.9501,
+          "oe_ci": [
+            0.7557,
+            1.1794
+          ],
+          "sensitivity": 0.7439,
+          "ppv": 0.4357,
+          "missed_events": 21,
+          "citl_intercept": -0.088,
+          "logistic_a": -0.0903,
+          "slope": 0.9977,
+          "alerts": 140,
+          "false_alerts": 79
+        }
+      },
+      "model_version": "1.0.0"
+    },
+    {
+      "week": 4,
+      "signals": {},
+      "score": {
+        "n": 600,
+        "mean_risk": 0.1306,
+        "alert_rate": 0.2017
+      },
+      "cbpe_auroc": 0.8825,
+      "domain_auc": 0.5044,
+      "labelled": {
+        "n": 1200,
+        "events": 154,
+        "auroc": 0.9098,
+        "auroc_se": 0.0161,
+        "brier": 0.0678,
+        "oe": 0.9994,
+        "oe_ci": [
+          0.8478,
+          1.1703
+        ],
+        "sensitivity": 0.7273,
+        "ppv": 0.4912,
+        "missed_events": 42,
+        "citl_intercept": -0.001,
+        "logistic_a": 0.2427,
+        "slope": 1.1989,
+        "weeks": [
+          1,
+          2
+        ]
+      },
+      "raw_signals": [],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 64,
+          "auroc": 0.9273,
+          "auroc_se": 0.0227,
+          "brier": 0.0558,
+          "oe": 0.817,
+          "oe_ci": [
+            0.6292,
+            1.0433
+          ],
+          "sensitivity": 0.8125,
+          "ppv": 0.4298,
+          "missed_events": 12,
+          "citl_intercept": -0.34,
+          "logistic_a": -0.0754,
+          "slope": 1.293,
+          "alerts": 121,
+          "false_alerts": 69
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 64,
+          "auroc": 0.9273,
+          "auroc_se": 0.0227,
+          "brier": 0.0558,
+          "oe": 0.817,
+          "oe_ci": [
+            0.6292,
+            1.0433
+          ],
+          "sensitivity": 0.8125,
+          "ppv": 0.4298,
+          "missed_events": 12,
+          "citl_intercept": -0.34,
+          "logistic_a": -0.0754,
+          "slope": 1.293,
+          "alerts": 121,
+          "false_alerts": 69
+        }
+      },
+      "model_version": "1.0.0"
+    },
+    {
+      "week": 5,
+      "signals": {
+        "DRIFT_MULTIVARIATE": {
+          "auc": 0.6276,
+          "top_features": [
+            "creatinine",
+            "spo2",
+            "emergency_adm"
+          ]
+        },
+        "NEW_SUBGROUP:site=D": {
+          "subgroup": "site=D",
+          "n": 179,
+          "share": 0.298,
+          "most_shifted_features": [
+            [
+              "creatinine",
+              3.434
+            ],
+            [
+              "temp",
+              0.072
+            ],
+            [
+              "wbc",
+              0.068
+            ]
+          ]
+        }
+      },
+      "score": {
+        "n": 600,
+        "mean_risk": 0.1408,
+        "alert_rate": 0.235
+      },
+      "cbpe_auroc": 0.8792,
+      "domain_auc": 0.6276,
+      "labelled": {
+        "n": 1800,
+        "events": 236,
+        "auroc": 0.8983,
+        "auroc_se": 0.0137,
+        "brier": 0.0719,
+        "oe": 0.9817,
+        "oe_ci": [
+          0.8604,
+          1.1153
+        ],
+        "sensitivity": 0.7331,
+        "ppv": 0.4701,
+        "missed_events": 63,
+        "citl_intercept": -0.0315,
+        "logistic_a": 0.1149,
+        "slope": 1.1223,
+        "weeks": [
+          1,
+          2,
+          3
+        ]
+      },
+      "raw_signals": [
+        "DRIFT_MULTIVARIATE",
+        "NEW_SUBGROUP:site=D"
+      ],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 107,
+          "auroc": 0.859,
+          "auroc_se": 0.0235,
+          "brier": 0.1106,
+          "oe": 1.2668,
+          "oe_ci": [
+            1.0382,
+            1.5308
+          ],
+          "sensitivity": 0.6729,
+          "ppv": 0.5106,
+          "missed_events": 35,
+          "citl_intercept": 0.4057,
+          "logistic_a": 0.2837,
+          "slope": 0.9139,
+          "alerts": 141,
+          "false_alerts": 69
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 107,
+          "auroc": 0.859,
+          "auroc_se": 0.0235,
+          "brier": 0.1106,
+          "oe": 1.2668,
+          "oe_ci": [
+            1.0382,
+            1.5308
+          ],
+          "sensitivity": 0.6729,
+          "ppv": 0.5106,
+          "missed_events": 35,
+          "citl_intercept": 0.4057,
+          "logistic_a": 0.2837,
+          "slope": 0.9139,
+          "alerts": 141,
+          "false_alerts": 69
+        }
+      },
+      "model_version": "1.0.0"
+    },
+    {
+      "week": 6,
+      "signals": {
+        "DRIFT_MULTIVARIATE": {
+          "auc": 0.6076,
+          "top_features": [
+            "creatinine",
+            "resp_rate",
+            "sbp"
+          ]
+        },
+        "NEW_SUBGROUP:site=D": {
+          "subgroup": "site=D",
+          "n": 172,
+          "share": 0.287,
+          "most_shifted_features": [
+            [
+              "creatinine",
+              3.496
+            ],
+            [
+              "resp_rate",
+              0.122
+            ],
+            [
+              "temp",
+              0.085
+            ]
+          ]
+        }
+      },
+      "score": {
+        "n": 600,
+        "mean_risk": 0.1377,
+        "alert_rate": 0.2083
+      },
+      "cbpe_auroc": 0.8822,
+      "domain_auc": 0.6076,
+      "labelled": {
+        "n": 1800,
+        "events": 223,
+        "auroc": 0.9017,
+        "auroc_se": 0.0139,
+        "brier": 0.0684,
+        "oe": 0.931,
+        "oe_ci": [
+          0.8128,
+          1.0615
+        ],
+        "sensitivity": 0.7399,
+        "ppv": 0.4472,
+        "missed_events": 58,
+        "citl_intercept": -0.1218,
+        "logistic_a": 0.0261,
+        "slope": 1.1316,
+        "weeks": [
+          2,
+          3,
+          4
+        ]
+      },
+      "raw_signals": [
+        "DRIFT_MULTIVARIATE",
+        "NEW_SUBGROUP:site=D"
+      ],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 116,
+          "auroc": 0.8747,
+          "auroc_se": 0.0216,
+          "brier": 0.1109,
+          "oe": 1.4045,
+          "oe_ci": [
+            1.1606,
+            1.6846
+          ],
+          "sensitivity": 0.5948,
+          "ppv": 0.552,
+          "missed_events": 47,
+          "citl_intercept": 0.648,
+          "logistic_a": 0.5055,
+          "slope": 0.9123,
+          "alerts": 125,
+          "false_alerts": 56
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 116,
+          "auroc": 0.8747,
+          "auroc_se": 0.0216,
+          "brier": 0.1109,
+          "oe": 1.4045,
+          "oe_ci": [
+            1.1606,
+            1.6846
+          ],
+          "sensitivity": 0.5948,
+          "ppv": 0.552,
+          "missed_events": 47,
+          "citl_intercept": 0.648,
+          "logistic_a": 0.5055,
+          "slope": 0.9123,
+          "alerts": 125,
+          "false_alerts": 56
+        }
+      },
+      "model_version": "1.0.0"
+    },
+    {
+      "week": 7,
+      "signals": {
+        "DRIFT_MULTIVARIATE": {
+          "auc": 0.625,
+          "top_features": [
+            "creatinine",
+            "lactate",
+            "emergency_adm"
+          ]
+        },
+        "NEW_SUBGROUP:site=D": {
+          "subgroup": "site=D",
+          "n": 175,
+          "share": 0.292,
+          "most_shifted_features": [
+            [
+              "creatinine",
+              4.431
+            ],
+            [
+              "age",
+              0.09
+            ],
+            [
+              "lactate",
+              0.083
+            ]
+          ]
+        }
+      },
+      "score": {
+        "n": 600,
+        "mean_risk": 0.1358,
+        "alert_rate": 0.2183
+      },
+      "cbpe_auroc": 0.885,
+      "domain_auc": 0.625,
+      "labelled": {
+        "n": 1800,
+        "events": 253,
+        "auroc": 0.8832,
+        "auroc_se": 0.0141,
+        "brier": 0.0822,
+        "oe": 1.0157,
+        "oe_ci": [
+          0.8944,
+          1.1488
+        ],
+        "sensitivity": 0.7312,
+        "ppv": 0.4602,
+        "missed_events": 68,
+        "citl_intercept": 0.0265,
+        "logistic_a": 0.0542,
+        "slope": 1.023,
+        "weeks": [
+          3,
+          4,
+          5
+        ]
+      },
+      "raw_signals": [
+        "DRIFT_MULTIVARIATE",
+        "NEW_SUBGROUP:site=D",
+        "SUBGROUP:site=D"
+      ],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 108,
+          "auroc": 0.8425,
+          "auroc_se": 0.0245,
+          "brier": 0.1095,
+          "oe": 1.325,
+          "oe_ci": [
+            1.0869,
+            1.5998
+          ],
+          "sensitivity": 0.5926,
+          "ppv": 0.4885,
+          "missed_events": 44,
+          "citl_intercept": 0.4951,
+          "logistic_a": 0.2625,
+          "slope": 0.849,
+          "alerts": 131,
+          "false_alerts": 67
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 108,
+          "auroc": 0.8425,
+          "auroc_se": 0.0245,
+          "brier": 0.1095,
+          "oe": 1.325,
+          "oe_ci": [
+            1.0869,
+            1.5998
+          ],
+          "sensitivity": 0.5926,
+          "ppv": 0.4885,
+          "missed_events": 44,
+          "citl_intercept": 0.4951,
+          "logistic_a": 0.2625,
+          "slope": 0.849,
+          "alerts": 131,
+          "false_alerts": 67
+        }
+      },
+      "model_version": "1.0.0"
+    },
+    {
+      "week": 8,
+      "signals": {
+        "DRIFT_MULTIVARIATE": {
+          "auc": 0.6268,
+          "top_features": [
+            "creatinine",
+            "spo2",
+            "heart_rate"
+          ]
+        },
+        "NEW_SUBGROUP:site=D": {
+          "subgroup": "site=D",
+          "n": 187,
+          "share": 0.312,
+          "most_shifted_features": [
+            [
+              "creatinine",
+              3.625
+            ],
+            [
+              "age",
+              0.076
+            ],
+            [
+              "temp",
+              0.063
+            ]
+          ]
+        },
+        "SUBGROUP:site=D": {
+          "subgroup": "site=D",
+          "oe": 2.1845,
+          "z": 9.14,
+          "auroc": 0.8498,
+          "events": 130,
+          "n": 351,
+          "sensitivity": 0.6,
+          "missed_events": 52
+        }
+      },
+      "score": {
+        "n": 600,
+        "mean_risk": 0.1351,
+        "alert_rate": 0.2183
+      },
+      "cbpe_auroc": 0.8757,
+      "domain_auc": 0.6268,
+      "labelled": {
+        "n": 1800,
+        "events": 287,
+        "auroc": 0.8802,
+        "auroc_se": 0.0134,
+        "brier": 0.0924,
+        "oe": 1.1696,
+        "oe_ci": [
+          1.0382,
+          1.313
+        ],
+        "sensitivity": 0.6725,
+        "ppv": 0.4987,
+        "missed_events": 94,
+        "citl_intercept": 0.2773,
+        "logistic_a": 0.2438,
+        "slope": 0.9755,
+        "weeks": [
+          4,
+          5,
+          6
+        ]
+      },
+      "raw_signals": [
+        "DRIFT_MULTIVARIATE",
+        "NEW_SUBGROUP:site=D",
+        "SUBGROUP:age_band=50-69",
+        "SUBGROUP:site=D"
+      ],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 132,
+          "auroc": 0.8552,
+          "auroc_se": 0.0216,
+          "brier": 0.1267,
+          "oe": 1.6284,
+          "oe_ci": [
+            1.3624,
+            1.931
+          ],
+          "sensitivity": 0.5833,
+          "ppv": 0.5878,
+          "missed_events": 55,
+          "citl_intercept": 0.8791,
+          "logistic_a": 0.7812,
+          "slope": 0.9441,
+          "alerts": 131,
+          "false_alerts": 54
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 132,
+          "auroc": 0.8552,
+          "auroc_se": 0.0216,
+          "brier": 0.1267,
+          "oe": 1.6284,
+          "oe_ci": [
+            1.3624,
+            1.931
+          ],
+          "sensitivity": 0.5833,
+          "ppv": 0.5878,
+          "missed_events": 55,
+          "citl_intercept": 0.8791,
+          "logistic_a": 0.7812,
+          "slope": 0.9441,
+          "alerts": 131,
+          "false_alerts": 54
+        }
+      },
+      "model_version": "1.0.0"
+    },
+    {
+      "week": 9,
+      "signals": {
+        "DRIFT_MULTIVARIATE": {
+          "auc": 0.6094,
+          "top_features": [
+            "creatinine",
+            "resp_rate",
+            "heart_rate"
+          ]
+        },
+        "NEW_SUBGROUP:site=D": {
+          "subgroup": "site=D",
+          "n": 183,
+          "share": 0.305,
+          "most_shifted_features": [
+            [
+              "creatinine",
+              3.43
+            ],
+            [
+              "sbp",
+              0.073
+            ],
+            [
+              "resp_rate",
+              0.064
+            ]
+          ]
+        }
+      },
+      "score": {
+        "n": 600,
+        "mean_risk": 0.1932,
+        "alert_rate": 0.31
+      },
+      "cbpe_auroc": 0.8923,
+      "domain_auc": 0.6094,
+      "labelled": null,
+      "raw_signals": [
+        "DRIFT_MULTIVARIATE",
+        "NEW_SUBGROUP:site=D"
+      ],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 118,
+          "auroc": 0.887,
+          "auroc_se": 0.0205,
+          "brier": 0.0931,
+          "oe": 1.0179,
+          "oe_ci": [
+            0.8426,
+            1.219
+          ],
+          "sensitivity": 0.822,
+          "ppv": 0.5215,
+          "missed_events": 21,
+          "citl_intercept": 0.0365,
+          "logistic_a": 0.0359,
+          "slope": 0.9993,
+          "alerts": 186,
+          "false_alerts": 89
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 118,
+          "auroc": 0.8385,
+          "auroc_se": 0.0237,
+          "brier": 0.1176,
+          "oe": 1.4811,
+          "oe_ci": [
+            1.2259,
+            1.7737
+          ],
+          "sensitivity": 0.6102,
+          "ppv": 0.5455,
+          "missed_events": 46,
+          "citl_intercept": 0.7018,
+          "logistic_a": 0.4416,
+          "slope": 0.8466,
+          "alerts": 132,
+          "false_alerts": 60
+        }
+      },
+      "model_version": "1.1.0"
+    },
+    {
+      "week": 10,
+      "signals": {
+        "DRIFT_MULTIVARIATE": {
+          "auc": 0.6467,
+          "top_features": [
+            "creatinine",
+            "heart_rate",
+            "emergency_adm"
+          ]
+        },
+        "NEW_SUBGROUP:site=D": {
+          "subgroup": "site=D",
+          "n": 189,
+          "share": 0.315,
+          "most_shifted_features": [
+            [
+              "creatinine",
+              3.688
+            ],
+            [
+              "resp_rate",
+              0.142
+            ],
+            [
+              "sbp",
+              0.044
+            ]
+          ]
+        }
+      },
+      "score": {
+        "n": 600,
+        "mean_risk": 0.2064,
+        "alert_rate": 0.3433
+      },
+      "cbpe_auroc": 0.8895,
+      "domain_auc": 0.6467,
+      "labelled": null,
+      "raw_signals": [
+        "DRIFT_MULTIVARIATE",
+        "NEW_SUBGROUP:site=D"
+      ],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 120,
+          "auroc": 0.8903,
+          "auroc_se": 0.0201,
+          "brier": 0.0982,
+          "oe": 0.969,
+          "oe_ci": [
+            0.8034,
+            1.1587
+          ],
+          "sensitivity": 0.8417,
+          "ppv": 0.4903,
+          "missed_events": 19,
+          "citl_intercept": -0.0637,
+          "logistic_a": -0.0379,
+          "slope": 1.0329,
+          "alerts": 206,
+          "false_alerts": 105
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 120,
+          "auroc": 0.8425,
+          "auroc_se": 0.0233,
+          "brier": 0.1153,
+          "oe": 1.4015,
+          "oe_ci": [
+            1.162,
+            1.6758
+          ],
+          "sensitivity": 0.65,
+          "ppv": 0.5379,
+          "missed_events": 42,
+          "citl_intercept": 0.5959,
+          "logistic_a": 0.4503,
+          "slope": 0.9059,
+          "alerts": 145,
+          "false_alerts": 67
+        }
+      },
+      "model_version": "1.1.0"
+    },
+    {
+      "week": 11,
+      "signals": {
+        "DRIFT_MULTIVARIATE": {
+          "auc": 0.6317,
+          "top_features": [
+            "creatinine",
+            "temp",
+            "heart_rate"
+          ]
+        },
+        "NEW_SUBGROUP:site=D": {
+          "subgroup": "site=D",
+          "n": 179,
+          "share": 0.298,
+          "most_shifted_features": [
+            [
+              "creatinine",
+              4.029
+            ],
+            [
+              "wbc",
+              0.144
+            ],
+            [
+              "lactate",
+              0.099
+            ]
+          ]
+        }
+      },
+      "score": {
+        "n": 600,
+        "mean_risk": 0.211,
+        "alert_rate": 0.3267
+      },
+      "cbpe_auroc": 0.8907,
+      "domain_auc": 0.6317,
+      "labelled": {
+        "n": 600,
+        "events": 118,
+        "auroc": 0.887,
+        "auroc_se": 0.0205,
+        "brier": 0.0931,
+        "oe": 1.0179,
+        "oe_ci": [
+          0.8426,
+          1.219
+        ],
+        "sensitivity": 0.822,
+        "ppv": 0.5215,
+        "missed_events": 21,
+        "citl_intercept": 0.0365,
+        "logistic_a": 0.0359,
+        "slope": 0.9993,
+        "weeks": [
+          9
+        ]
+      },
+      "raw_signals": [
+        "DRIFT_MULTIVARIATE",
+        "NEW_SUBGROUP:site=D"
+      ],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 126,
+          "auroc": 0.9073,
+          "auroc_se": 0.0183,
+          "brier": 0.0966,
+          "oe": 0.9952,
+          "oe_ci": [
+            0.829,
+            1.1849
+          ],
+          "sensitivity": 0.873,
+          "ppv": 0.5612,
+          "missed_events": 16,
+          "citl_intercept": -0.0104,
+          "logistic_a": 0.0382,
+          "slope": 1.0629,
+          "alerts": 196,
+          "false_alerts": 86
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 126,
+          "auroc": 0.8588,
+          "auroc_se": 0.0218,
+          "brier": 0.1187,
+          "oe": 1.4123,
+          "oe_ci": [
+            1.1764,
+            1.6815
+          ],
+          "sensitivity": 0.6508,
+          "ppv": 0.5816,
+          "missed_events": 44,
+          "citl_intercept": 0.6438,
+          "logistic_a": 0.5256,
+          "slope": 0.9236,
+          "alerts": 141,
+          "false_alerts": 59
+        }
+      },
+      "model_version": "1.1.0"
+    },
+    {
+      "week": 12,
+      "signals": {
+        "DRIFT_MULTIVARIATE": {
+          "auc": 0.6266,
+          "top_features": [
+            "creatinine",
+            "heart_rate",
+            "emergency_adm"
+          ]
+        },
+        "NEW_SUBGROUP:site=D": {
+          "subgroup": "site=D",
+          "n": 191,
+          "share": 0.318,
+          "most_shifted_features": [
+            [
+              "creatinine",
+              3.681
+            ],
+            [
+              "wbc",
+              0.068
+            ],
+            [
+              "age",
+              0.064
+            ]
+          ]
+        }
+      },
+      "score": {
+        "n": 600,
+        "mean_risk": 0.1966,
+        "alert_rate": 0.33
+      },
+      "cbpe_auroc": 0.8893,
+      "domain_auc": 0.6266,
+      "labelled": {
+        "n": 1200,
+        "events": 238,
+        "auroc": 0.8891,
+        "auroc_se": 0.0143,
+        "brier": 0.0956,
+        "oe": 0.9927,
+        "oe_ci": [
+          0.8705,
+          1.1271
+        ],
+        "sensitivity": 0.8319,
+        "ppv": 0.5051,
+        "missed_events": 40,
+        "citl_intercept": -0.015,
+        "logistic_a": -0.0028,
+        "slope": 1.0146,
+        "weeks": [
+          9,
+          10
+        ]
+      },
+      "raw_signals": [
+        "DRIFT_MULTIVARIATE",
+        "NEW_SUBGROUP:site=D"
+      ],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 119,
+          "auroc": 0.8514,
+          "auroc_se": 0.0229,
+          "brier": 0.1091,
+          "oe": 1.0089,
+          "oe_ci": [
+            0.8358,
+            1.2073
+          ],
+          "sensitivity": 0.7395,
+          "ppv": 0.4444,
+          "missed_events": 31,
+          "citl_intercept": 0.0174,
+          "logistic_a": -0.1146,
+          "slope": 0.8579,
+          "alerts": 198,
+          "false_alerts": 110
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 119,
+          "auroc": 0.8041,
+          "auroc_se": 0.0254,
+          "brier": 0.1258,
+          "oe": 1.49,
+          "oe_ci": [
+            1.2343,
+            1.783
+          ],
+          "sensitivity": 0.5714,
+          "ppv": 0.5271,
+          "missed_events": 51,
+          "citl_intercept": 0.6938,
+          "logistic_a": 0.2672,
+          "slope": 0.7514,
+          "alerts": 129,
+          "false_alerts": 61
+        }
+      },
+      "model_version": "1.1.0"
+    },
+    {
+      "week": 13,
+      "signals": {
+        "DRIFT_MULTIVARIATE": {
+          "auc": 0.6199,
+          "top_features": [
+            "creatinine",
+            "heart_rate",
+            "spo2"
+          ]
+        },
+        "NEW_SUBGROUP:site=D": {
+          "subgroup": "site=D",
+          "n": 165,
+          "share": 0.275,
+          "most_shifted_features": [
+            [
+              "creatinine",
+              3.539
+            ],
+            [
+              "age",
+              0.113
+            ],
+            [
+              "sbp",
+              0.096
+            ]
+          ]
+        }
+      },
+      "score": {
+        "n": 600,
+        "mean_risk": 0.1777,
+        "alert_rate": 0.2783
+      },
+      "cbpe_auroc": 0.8853,
+      "domain_auc": 0.6199,
+      "labelled": {
+        "n": 1800,
+        "events": 364,
+        "auroc": 0.8956,
+        "auroc_se": 0.0113,
+        "brier": 0.096,
+        "oe": 0.9935,
+        "oe_ci": [
+          0.8941,
+          1.101
+        ],
+        "sensitivity": 0.8462,
+        "ppv": 0.5238,
+        "missed_events": 56,
+        "citl_intercept": -0.0135,
+        "logistic_a": 0.0115,
+        "slope": 1.0308,
+        "weeks": [
+          9,
+          10,
+          11
+        ]
+      },
+      "raw_signals": [
+        "DRIFT_MULTIVARIATE",
+        "NEW_SUBGROUP:site=D"
+      ],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 117,
+          "auroc": 0.9062,
+          "auroc_se": 0.019,
+          "brier": 0.0887,
+          "oe": 1.0971,
+          "oe_ci": [
+            0.9073,
+            1.3148
+          ],
+          "sensitivity": 0.7949,
+          "ppv": 0.5569,
+          "missed_events": 24,
+          "citl_intercept": 0.1827,
+          "logistic_a": 0.3452,
+          "slope": 1.152,
+          "alerts": 167,
+          "false_alerts": 74
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 117,
+          "auroc": 0.8437,
+          "auroc_se": 0.0235,
+          "brier": 0.1153,
+          "oe": 1.5382,
+          "oe_ci": [
+            1.2721,
+            1.8435
+          ],
+          "sensitivity": 0.5983,
+          "ppv": 0.5983,
+          "missed_events": 47,
+          "citl_intercept": 0.7586,
+          "logistic_a": 0.5893,
+          "slope": 0.9036,
+          "alerts": 117,
+          "false_alerts": 47
+        }
+      },
+      "model_version": "1.1.0"
+    },
+    {
+      "week": 14,
+      "signals": {
+        "DRIFT_MULTIVARIATE": {
+          "auc": 0.6409,
+          "top_features": [
+            "creatinine",
+            "heart_rate",
+            "comorbidity"
+          ]
+        },
+        "NEW_SUBGROUP:site=D": {
+          "subgroup": "site=D",
+          "n": 180,
+          "share": 0.3,
+          "most_shifted_features": [
+            [
+              "creatinine",
+              4.092
+            ],
+            [
+              "temp",
+              0.08
+            ],
+            [
+              "wbc",
+              0.075
+            ]
+          ]
+        }
+      },
+      "score": {
+        "n": 600,
+        "mean_risk": 0.1853,
+        "alert_rate": 0.305
+      },
+      "cbpe_auroc": 0.885,
+      "domain_auc": 0.6409,
+      "labelled": {
+        "n": 1800,
+        "events": 365,
+        "auroc": 0.884,
+        "auroc_se": 0.0118,
+        "brier": 0.1013,
+        "oe": 0.9908,
+        "oe_ci": [
+          0.8917,
+          1.0978
+        ],
+        "sensitivity": 0.8192,
+        "ppv": 0.4983,
+        "missed_events": 66,
+        "citl_intercept": -0.019,
+        "logistic_a": -0.0368,
+        "slope": 0.9783,
+        "weeks": [
+          10,
+          11,
+          12
+        ]
+      },
+      "raw_signals": [
+        "DRIFT_MULTIVARIATE",
+        "NEW_SUBGROUP:site=D"
+      ],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 120,
+          "auroc": 0.8966,
+          "auroc_se": 0.0196,
+          "brier": 0.0927,
+          "oe": 1.0796,
+          "oe_ci": [
+            0.8951,
+            1.2909
+          ],
+          "sensitivity": 0.8417,
+          "ppv": 0.5519,
+          "missed_events": 19,
+          "citl_intercept": 0.1494,
+          "logistic_a": 0.2758,
+          "slope": 1.1254,
+          "alerts": 183,
+          "false_alerts": 82
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 120,
+          "auroc": 0.8529,
+          "auroc_se": 0.0227,
+          "brier": 0.1156,
+          "oe": 1.511,
+          "oe_ci": [
+            1.2527,
+            1.8067
+          ],
+          "sensitivity": 0.625,
+          "ppv": 0.5682,
+          "missed_events": 45,
+          "citl_intercept": 0.7258,
+          "logistic_a": 0.6097,
+          "slope": 0.9299,
+          "alerts": 132,
+          "false_alerts": 57
+        }
+      },
+      "model_version": "1.1.0"
+    },
+    {
+      "week": 15,
+      "signals": {
+        "DRIFT_MULTIVARIATE": {
+          "auc": 0.6101,
+          "top_features": [
+            "creatinine",
+            "spo2",
+            "lactate"
+          ]
+        },
+        "NEW_SUBGROUP:site=D": {
+          "subgroup": "site=D",
+          "n": 158,
+          "share": 0.263,
+          "most_shifted_features": [
+            [
+              "creatinine",
+              3.448
+            ],
+            [
+              "wbc",
+              0.119
+            ],
+            [
+              "temp",
+              0.096
+            ]
+          ]
+        }
+      },
+      "score": {
+        "n": 600,
+        "mean_risk": 0.1858,
+        "alert_rate": 0.29
+      },
+      "cbpe_auroc": 0.8874,
+      "domain_auc": 0.6101,
+      "labelled": {
+        "n": 1800,
+        "events": 362,
+        "auroc": 0.8892,
+        "auroc_se": 0.0116,
+        "brier": 0.0981,
+        "oe": 1.0307,
+        "oe_ci": [
+          0.9273,
+          1.1426
+        ],
+        "sensitivity": 0.8039,
+        "ppv": 0.5187,
+        "missed_events": 71,
+        "citl_intercept": 0.0615,
+        "logistic_a": 0.0677,
+        "slope": 1.0068,
+        "weeks": [
+          11,
+          12,
+          13
+        ]
+      },
+      "raw_signals": [
+        "DRIFT_MULTIVARIATE",
+        "NEW_SUBGROUP:site=D"
+      ],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 117,
+          "auroc": 0.85,
+          "auroc_se": 0.0232,
+          "brier": 0.1054,
+          "oe": 1.0498,
+          "oe_ci": [
+            0.8682,
+            1.2581
+          ],
+          "sensitivity": 0.7179,
+          "ppv": 0.4828,
+          "missed_events": 33,
+          "citl_intercept": 0.0987,
+          "logistic_a": -0.0885,
+          "slope": 0.8193,
+          "alerts": 174,
+          "false_alerts": 90
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 117,
+          "auroc": 0.8348,
+          "auroc_se": 0.024,
+          "brier": 0.1169,
+          "oe": 1.4019,
+          "oe_ci": [
+            1.1594,
+            1.6801
+          ],
+          "sensitivity": 0.6154,
+          "ppv": 0.5538,
+          "missed_events": 45,
+          "citl_intercept": 0.6242,
+          "logistic_a": 0.2848,
+          "slope": 0.7902,
+          "alerts": 130,
+          "false_alerts": 58
+        }
+      },
+      "model_version": "1.1.0"
+    },
+    {
+      "week": 16,
+      "signals": {
+        "DRIFT_MULTIVARIATE": {
+          "auc": 0.6114,
+          "top_features": [
+            "creatinine",
+            "heart_rate",
+            "resp_rate"
+          ]
+        },
+        "NEW_SUBGROUP:site=D": {
+          "subgroup": "site=D",
+          "n": 172,
+          "share": 0.287,
+          "most_shifted_features": [
+            [
+              "creatinine",
+              3.366
+            ],
+            [
+              "resp_rate",
+              0.124
+            ],
+            [
+              "lactate",
+              0.087
+            ]
+          ]
+        }
+      },
+      "score": {
+        "n": 600,
+        "mean_risk": 0.1807,
+        "alert_rate": 0.3017
+      },
+      "cbpe_auroc": 0.8895,
+      "domain_auc": 0.6114,
+      "labelled": {
+        "n": 1800,
+        "events": 356,
+        "auroc": 0.8847,
+        "auroc_se": 0.0119,
+        "brier": 0.0968,
+        "oe": 1.0603,
+        "oe_ci": [
+          0.953,
+          1.1764
+        ],
+        "sensitivity": 0.7921,
+        "ppv": 0.5146,
+        "missed_events": 74,
+        "citl_intercept": 0.1152,
+        "logistic_a": 0.1405,
+        "slope": 1.0254,
+        "weeks": [
+          12,
+          13,
+          14
+        ]
+      },
+      "raw_signals": [
+        "DRIFT_MULTIVARIATE",
+        "NEW_SUBGROUP:site=D"
+      ],
+      "oracle": {
+        "live": {
+          "n": 600,
+          "events": 117,
+          "auroc": 0.9008,
+          "auroc_se": 0.0195,
+          "brier": 0.0936,
+          "oe": 1.0793,
+          "oe_ci": [
+            0.8926,
+            1.2935
+          ],
+          "sensitivity": 0.8205,
+          "ppv": 0.5304,
+          "missed_events": 21,
+          "citl_intercept": 0.1498,
+          "logistic_a": 0.2603,
+          "slope": 1.1084,
+          "alerts": 181,
+          "false_alerts": 85
+        },
+        "no_monitoring": {
+          "n": 600,
+          "events": 117,
+          "auroc": 0.8719,
+          "auroc_se": 0.0217,
+          "brier": 0.1125,
+          "oe": 1.555,
+          "oe_ci": [
+            1.286,
+            1.8636
+          ],
+          "sensitivity": 0.5812,
+          "ppv": 0.5714,
+          "missed_events": 49,
+          "citl_intercept": 0.7731,
+          "logistic_a": 0.8268,
+          "slope": 1.0307,
+          "alerts": 119,
+          "false_alerts": 51
+        }
+      },
+      "model_version": "1.1.0"
+    }
+  ],
+  "incidents": [
+    {
+      "id": "INC-SUBG-05",
+      "opened_week": 5,
+      "signals": {
+        "DRIFT_MULTIVARIATE": {
+          "auc": 0.6276,
+          "top_features": [
+            "creatinine",
+            "spo2",
+            "emergency_adm"
+          ]
+        },
+        "NEW_SUBGROUP:site=D": {
+          "subgroup": "site=D",
+          "n": 179,
+          "share": 0.298,
+          "most_shifted_features": [
+            [
+              "creatinine",
+              3.434
+            ],
+            [
+              "temp",
+              0.072
+            ],
+            [
+              "wbc",
+              0.068
+            ]
+          ]
+        }
+      },
+      "labelled_weeks_used": null,
+      "change_point": null,
+      "diagnosis": {
+        "root_cause": "new_population_unverified",
+        "confidence": "medium",
+        "scope": {
+          "subgroup": "site=D"
+        },
+        "evidence": [
+          "site=D appeared (30% of patients); most shifted features: creatinine, temp, wbc"
+        ],
+        "rationale": "Model performance in this population is unknown until outcomes arrive. Enhanced surveillance with prioritised outcome review.",
+        "verified": true,
+        "backend": "mock"
+      },
+      "plan": {
+        "category": "enhanced_surveillance",
+        "root_cause": "new_population_unverified",
+        "recommendations": [
+          "Prioritise outcome chart review for site=D",
+          "Lower subgroup alarm thresholds until performance is confirmed"
+        ],
+        "shadow": null,
+        "verification": null,
+        "action": "enhanced_surveillance"
+      },
+      "decision": {
+        "action": "enhanced_surveillance",
+        "pccp": {
+          "inside_envelope": true,
+          "reasons": [
+            "all PCCP conditions met"
+          ]
+        },
+        "approver": "PCCP policy (pre-authorised change)",
+        "approved": true,
+        "vigilance_flag": false
+      },
+      "transcript": [
+        {
+          "thought": "Review the triggering signals and recent trend.",
+          "tool": "get_incident_signals",
+          "input": {},
+          "result": {
+            "week": 5,
+            "onset_week": 5,
+            "signals": {
+              "DRIFT_MULTIVARIATE": {
+                "auc": 0.6276,
+                "top_features": [
+                  "creatinine",
+                  "spo2",
+                  "emergency_adm"
+                ]
+              },
+              "NEW_SUBGROUP:site=D": {
+                "subgroup": "site=D",
+                "n": 179,
+                "share": 0.298,
+                "most_shifted_features": [
+                  [
+                    "creatinine",
+                    3.434
+                  ],
+                  [
+                    "temp",
+                    0.072
+                  ],
+                  [
+                    "wbc",
+                    0.068
+                  ]
+                ]
+              }
+            },
+            "trend": [
+              {
+                "week": 1,
+                "alert_rate": 0.2,
+                "cbpe_auroc": 0.8806,
+                "domain_auc": 0.4814,
+                "labelled_oe": null,
+                "labelled_auroc": null
+              },
+              {
+                "week": 2,
+                "alert_rate": 0.18,
+                "cbpe_auroc": 0.8811,
+                "domain_auc": 0.4799,
+                "labelled_oe": null,
+                "labelled_auroc": null
+              },
+              {
+                "week": 3,
+                "alert_rate": 0.2333,
+                "cbpe_auroc": 0.8802,
+                "domain_auc": 0.4879,
+                "labelled_oe": 0.9722,
+                "labelled_auroc": 0.9127
+              },
+              {
+                "week": 4,
+                "alert_rate": 0.2017,
+                "cbpe_auroc": 0.8825,
+                "domain_auc": 0.5044,
+                "labelled_oe": 0.9994,
+                "labelled_auroc": 0.9098
+              },
+              {
+                "week": 5,
+                "alert_rate": 0.235,
+                "cbpe_auroc": 0.8792,
+                "domain_auc": 0.6276,
+                "labelled_oe": 0.9817,
+                "labelled_auroc": 0.8983
+              }
+            ],
+            "baseline": {
+              "auroc": 0.8762,
+              "oe": 0.9229,
+              "cbpe_auroc": 0.8799,
+              "n": 3000,
+              "mean_risk": 0.1311,
+              "alert_rate": 0.2117
+            },
+            "label_lag_weeks": 2,
+            "labelled_weeks_for_diagnosis": null,
+            "change_point": null
+          },
+          "backend": "mock"
+        },
+        {
+          "thought": "Rule out pipeline faults first: a unit change is abrupt, common and fixable without touching the model.",
+          "tool": "check_unit_mismatch",
+          "input": {},
+          "result": {
+            "hypothesis": "unit_change",
+            "supported": false,
+            "findings": []
+          },
+          "backend": "mock"
+        },
+        {
+          "thought": "Next pipeline hypothesis: a dropped feed back-filled with a default value.",
+          "tool": "check_imputation_artifact",
+          "input": {},
+          "result": {
+            "hypothesis": "feed_outage",
+            "supported": false,
+            "findings": []
+          },
+          "backend": "mock"
+        },
+        {
+          "thought": "Label-free drift only. Has a population the model never saw appeared?",
+          "tool": "check_new_population",
+          "input": {},
+          "result": {
+            "hypothesis": "new_population",
+            "supported": true,
+            "findings": [
+              {
+                "subgroup": "site=D",
+                "n": 179,
+                "share": 0.298,
+                "most_shifted_features": [
+                  [
+                    "creatinine",
+                    3.434
+                  ],
+                  [
+                    "temp",
+                    0.072
+                  ],
+                  [
+                    "wbc",
+                    0.068
+                  ]
+                ]
+              }
+            ]
+          },
+          "backend": "mock"
+        },
+        {
+          "thought": "Concluding: new_population_unverified.",
+          "tool": "submit_diagnosis",
+          "input": {
+            "root_cause": "new_population_unverified",
+            "confidence": "medium",
+            "scope": {
+              "subgroup": "site=D"
+            },
+            "evidence": [
+              "site=D appeared (30% of patients); most shifted features: creatinine, temp, wbc"
+            ],
+            "rationale": "Model performance in this population is unknown until outcomes arrive. Enhanced surveillance with prioritised outcome review."
+          },
+          "result": {
+            "accepted_for_verification": true
+          },
+          "backend": "mock"
+        }
+      ]
+    },
+    {
+      "id": "INC-SUBG-08",
+      "opened_week": 8,
+      "signals": {
+        "SUBGROUP:site=D": {
+          "subgroup": "site=D",
+          "oe": 2.1845,
+          "z": 9.14,
+          "auroc": 0.8498,
+          "events": 130,
+          "n": 351,
+          "sensitivity": 0.6,
+          "missed_events": 52
+        }
+      },
+      "labelled_weeks_used": [
+        5,
+        6
+      ],
+      "change_point": {
+        "method": "change-point",
+        "candidate_onset_week": 5,
+        "lr": 15.28,
+        "weeks_used": [
+          5,
+          6
+        ]
+      },
+      "diagnosis": {
+        "root_cause": "subgroup_degradation",
+        "confidence": "high",
+        "scope": {
+          "subgroup": "site=D"
+        },
+        "evidence": [
+          "site=D: O/E 2.1845 (z=9.14), sensitivity 0.6, 52 missed events",
+          "Remaining population O/E 0.8648 - in control"
+        ],
+        "rationale": "Miscalibration is confined to one subgroup; the rest of the population is in control, so a global fix would be wrong.",
+        "verified": true,
+        "backend": "mock"
+      },
+      "plan": {
+        "category": "subgroup_restriction",
+        "root_cause": "subgroup_degradation",
+        "recommendations": [
+          "Suspend autonomous alerting for site=D; revert to standard early-warning score there",
+          "Interim after sign-off: site-D logistic recalibration (a=+1.633, b=1.021)",
+          "Commission local validation for site=D before re-enabling"
+        ],
+        "shadow": {
+          "current": {
+            "auroc": 0.8603,
+            "oe": 1.3487,
+            "brier": 0.1101,
+            "sensitivity": 0.6333,
+            "ppv": 0.5229,
+            "missed_events": 33,
+            "slope": 0.9193,
+            "alert_rate": 0.2271,
+            "worst_subgroup_oe_dev": 1.241,
+            "worst_subgroup": "site=D"
+          },
+          "site_recalibration": {
+            "auroc": 0.8945,
+            "oe": 0.9536,
+            "brier": 0.0962,
+            "sensitivity": 0.8111,
+            "ppv": 0.474,
+            "missed_events": 17,
+            "slope": 1.0067,
+            "alert_rate": 0.3208,
+            "worst_subgroup_oe_dev": 0.169,
+            "worst_subgroup": "site=B"
+          }
+        },
+        "verification": null,
+        "action": "subgroup_restriction",
+        "candidate": {
+          "version": "1.1.0",
+          "note": "site-D logistic recalibration (a=+1.633, b=1.021)",
+          "fingerprint": "981f9d067928"
+        }
+      },
+      "decision": {
+        "action": "subgroup_restriction",
+        "pccp": {
+          "inside_envelope": false,
+          "reasons": [
+            "'subgroup_restriction' is outside the PCCP: potential substantial modification, requires clinical-safety review"
+          ]
+        },
+        "approver": "clinical safety officer (simulated)",
+        "approved": true,
+        "vigilance_flag": true,
+        "review_note": "shadow evaluation non-inferior; accepted"
+      },
+      "transcript": [
+        {
+          "thought": "Review the triggering signals and recent trend.",
+          "tool": "get_incident_signals",
+          "input": {},
+          "result": {
+            "week": 8,
+            "onset_week": 8,
+            "signals": {
+              "SUBGROUP:site=D": {
+                "subgroup": "site=D",
+                "oe": 2.1845,
+                "z": 9.14,
+                "auroc": 0.8498,
+                "events": 130,
+                "n": 351,
+                "sensitivity": 0.6,
+                "missed_events": 52
+              }
+            },
+            "trend": [
+              {
+                "week": 3,
+                "alert_rate": 0.2333,
+                "cbpe_auroc": 0.8802,
+                "domain_auc": 0.4879,
+                "labelled_oe": 0.9722,
+                "labelled_auroc": 0.9127
+              },
+              {
+                "week": 4,
+                "alert_rate": 0.2017,
+                "cbpe_auroc": 0.8825,
+                "domain_auc": 0.5044,
+                "labelled_oe": 0.9994,
+                "labelled_auroc": 0.9098
+              },
+              {
+                "week": 5,
+                "alert_rate": 0.235,
+                "cbpe_auroc": 0.8792,
+                "domain_auc": 0.6276,
+                "labelled_oe": 0.9817,
+                "labelled_auroc": 0.8983
+              },
+              {
+                "week": 6,
+                "alert_rate": 0.2083,
+                "cbpe_auroc": 0.8822,
+                "domain_auc": 0.6076,
+                "labelled_oe": 0.931,
+                "labelled_auroc": 0.9017
+              },
+              {
+                "week": 7,
+                "alert_rate": 0.2183,
+                "cbpe_auroc": 0.885,
+                "domain_auc": 0.625,
+                "labelled_oe": 1.0157,
+                "labelled_auroc": 0.8832
+              },
+              {
+                "week": 8,
+                "alert_rate": 0.2183,
+                "cbpe_auroc": 0.8757,
+                "domain_auc": 0.6268,
+                "labelled_oe": 1.1696,
+                "labelled_auroc": 0.8802
+              }
+            ],
+            "baseline": {
+              "auroc": 0.8762,
+              "oe": 0.9229,
+              "cbpe_auroc": 0.8799,
+              "n": 3000,
+              "mean_risk": 0.1311,
+              "alert_rate": 0.2117
+            },
+            "label_lag_weeks": 2,
+            "labelled_weeks_for_diagnosis": [
+              5,
+              6
+            ],
+            "change_point": {
+              "method": "change-point",
+              "candidate_onset_week": 5,
+              "lr": 15.28,
+              "weeks_used": [
+                5,
+                6
+              ]
+            }
+          },
+          "backend": "mock"
+        },
+        {
+          "thought": "Rule out pipeline faults first: a unit change is abrupt, common and fixable without touching the model.",
+          "tool": "check_unit_mismatch",
+          "input": {},
+          "result": {
+            "hypothesis": "unit_change",
+            "supported": false,
+            "findings": []
+          },
+          "backend": "mock"
+        },
+        {
+          "thought": "Next pipeline hypothesis: a dropped feed back-filled with a default value.",
+          "tool": "check_imputation_artifact",
+          "input": {},
+          "result": {
+            "hypothesis": "feed_outage",
+            "supported": false,
+            "findings": []
+          },
+          "backend": "mock"
+        },
+        {
+          "thought": "Labelled signals present. Is the degradation local or global?",
+          "tool": "localise_subgroups",
+          "input": {},
+          "result": {
+            "hypothesis": "subgroup_degradation",
+            "supported": true,
+            "flagged": [
+              {
+                "subgroup": "site=D",
+                "oe": 2.1845,
+                "z": 9.14,
+                "auroc": 0.8498,
+                "events": 130,
+                "n": 351,
+                "sensitivity": 0.6,
+                "missed_events": 52,
+                "rest_oe": 0.8648,
+                "rest_in_control": true,
+                "heterogeneity_z": 6.82
+              },
+              {
+                "subgroup": "age_band=50-69",
+                "oe": 1.5908,
+                "z": 4.57,
+                "auroc": 0.8708,
+                "events": 95,
+                "n": 550,
+                "sensitivity": 0.4947,
+                "missed_events": 48,
+                "rest_oe": 1.1925,
+                "rest_in_control": true,
+                "heterogeneity_z": 2.13
+              },
+              {
+                "subgroup": "sex=F",
+                "oe": 1.3591,
+                "z": 3.17,
+                "auroc": 0.8739,
+                "events": 106,
+                "n": 581,
+                "sensitivity": 0.6509,
+                "missed_events": 37,
+                "rest_oe": 1.3137,
+                "rest_in_control": false,
+                "heterogeneity_z": 0.25
+              },
+              {
+                "subgroup": "sex=M",
+                "oe": 1.3137,
+                "z": 2.96,
+                "auroc": 0.8598,
+                "events": 117,
+                "n": 619,
+                "sensitivity": 0.6154,
+                "missed_events": 45,
+                "rest_oe": 1.3591,
+                "rest_in_control": false,
+                "heterogeneity_z": 0.25
+              }
+            ],
+            "unseen_subgroups": [
+              {
+                "subgroup": "site=D",
+                "n": 351
+              }
+            ],
+            "localised": "site=D"
+          },
+          "backend": "mock"
+        },
+        {
+          "thought": "Concluding: subgroup_degradation.",
+          "tool": "submit_diagnosis",
+          "input": {
+            "root_cause": "subgroup_degradation",
+            "confidence": "high",
+            "scope": {
+              "subgroup": "site=D"
+            },
+            "evidence": [
+              "site=D: O/E 2.1845 (z=9.14), sensitivity 0.6, 52 missed events",
+              "Remaining population O/E 0.8648 - in control"
+            ],
+            "rationale": "Miscalibration is confined to one subgroup; the rest of the population is in control, so a global fix would be wrong."
+          },
+          "result": {
+            "accepted_for_verification": true
+          },
+          "backend": "mock"
+        }
+      ]
+    }
+  ],
+  "final_model": {
+    "version": "1.1.0",
+    "note": "site-D logistic recalibration (a=+1.633, b=1.021)",
+    "fingerprint": "981f9d067928"
+  },
+  "pipeline_corrections": [],
+  "impact": {
+    "post_shift_events": 1417,
+    "post_shift_patients": 7200,
+    "missed_events_live": 365,
+    "alerts_live": 2019,
+    "false_alerts_live": 967,
+    "missed_events_no_monitoring": 550,
+    "alerts_no_monitoring": 1573,
+    "false_alerts_no_monitoring": 706,
+    "net_benefit_per_1000_live": 112.5,
+    "net_benefit_per_1000_no_monitoring": 95.9
+  }
+}
