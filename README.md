@@ -1,8 +1,35 @@
-# ModelVigil
+<h1 align="center">ModelVigil 🩺📈</h1>
 
-**Agentic post-market surveillance for clinical prediction models.**
+<p align="center"><b>Agentic post-market surveillance for clinical prediction models</b></p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/scikit--learn-HistGradientBoosting-F7931E?logo=scikitlearn&logoColor=white" alt="scikit-learn">
+  <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" alt="NumPy">
+  <img src="https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=white" alt="pandas">
+  <img src="https://img.shields.io/badge/SciPy-8CAAE6?logo=scipy&logoColor=white" alt="SciPy">
+  <img src="https://img.shields.io/badge/Matplotlib-11557C" alt="Matplotlib">
+  <br>
+  <img src="https://img.shields.io/badge/Anthropic-Claude%20tool%20use-D97757?logo=anthropic&logoColor=white" alt="Anthropic Claude">
+  <img src="https://img.shields.io/badge/Agents-Monitor%20%C2%B7%20Diagnostician%20%C2%B7%20Remediation%20%C2%B7%20Governance-5A4FCF" alt="Multi-agent">
+  <img src="https://img.shields.io/badge/LLM-offline%20mock%20backend-6E6E6E" alt="Mock backend">
+  <br>
+  <img src="https://img.shields.io/badge/HL7%20FHIR-Observation%20%2B%20LOINC-E34F26" alt="FHIR LOINC">
+  <img src="https://img.shields.io/badge/EU%20AI%20Act-Art.%2012%20%C2%B7%2072%20%C2%B7%2073-003399" alt="EU AI Act">
+  <img src="https://img.shields.io/badge/MDR-PMS%20Arts.%2083%E2%80%9387-003399" alt="MDR">
+  <img src="https://img.shields.io/badge/FDA-PCCP-1F4E79" alt="FDA PCCP">
+  <br>
+  <img src="https://img.shields.io/badge/tests-pytest%20(16%20passing)-0A9EDC?logo=pytest&logoColor=white" alt="pytest">
+  <img src="https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white" alt="GitHub Actions">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT">
+  <img src="https://img.shields.io/badge/status-research%20prototype-orange" alt="status">
+</p>
 
 ModelVigil watches a deployed hospital risk model, a 48-hour clinical-deterioration score, after it goes live. It detects degradation **before outcome labels arrive**, works out **why** performance changed, proposes a fix that has been shadow-tested and stays inside a pre-agreed change-control plan, sends the fix through human approval, and writes an EU AI Act Art. 72-style post-market monitoring report backed by a tamper-evident audit trail.
+
+> ⚠️ **Research prototype only. Not a medical device.** It runs on synthetic data and must not be used for clinical decision-making or as regulatory advice. See [Limitations](#limitations).
+
+<p align="center"><img src="examples/subgroup_site_s7/timeline.png" width="760" alt="ModelVigil timeline: a new renal site joins, the agents flag it as unverified, then localise the miscalibration to that site once outcomes arrive"></p>
 
 ```
 python -m modelvigil run --scenario lab_unit_change

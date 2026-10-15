@@ -5,3 +5,4 @@ runs/
 *.egg-info/
 .venv/
 .env
+.DS_Store
